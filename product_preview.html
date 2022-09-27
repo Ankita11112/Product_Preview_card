@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product preview card component</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Big+Shoulders+Display:wght@800&family=Epilogue:wght@500;700&family=Inter:wght@700&family=Karla&family=Lexend+Deca&family=Manrope:wght@500;700&family=Overpass&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Big+Shoulders+Display:wght@800&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@700&family=Karla&family=Lexend+Deca&family=Manrope:wght@500;700&family=Open+Sans:wght@400;600&family=Overpass&family=Poppins:wght@700&display=swap');
+
+        body {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: rgb(231, 225, 217);
+        }
+
+        .box {
+            position: relative;
+            top: 120px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 450px;
+            width: 600px;
+        }
+
+        #perfume {
+            width: 300px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .specifications {
+            padding-left: 30px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            background-color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            width: 300px;
+            height: 450px;
+
+        }
+
+        .specifications h5 {
+            position: relative;
+            top: 8px;
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: gray;
+            font-weight: 500;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .specifications h1 {
+            font-size: 34px;
+            margin-right: 35px;
+            line-height: 35px;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Overpass', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .specifications p {
+            margin-right: 50px;
+            font-size: 15px;
+            word-spacing: 1px;
+            line-height: 22px;
+            color: gray;
+            font-weight: 500;
+            font-family: 'Barlow', sans-serif;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Epilogue', sans-serif;
+            font-family: 'Fraunces', serif;
+            font-family: 'Inter', sans-serif;
+            font-family: 'Karla', sans-serif;
+            font-family: 'Lexend Deca', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .dollar {
+            align-items: center;
+            display: flex;
+            width: 200px;
+            position: relative;
+            bottom: 10px;
+
+        }
+
+        .dollar h1 {
+            color: hsl(158, 36%, 37%);
+            font-size: 35px;
+        }
+
+        .dollar p {
+            position: relative;
+            right: 20px;
+            font-size: 14px;
+            text-decoration: line-through;
+        }
+
+        .click {
+            justify-content: center;
+
+        }
+
+        .click button {
+            position: relative;
+            bottom: 5px;
+            height: 50px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            width: 240px;
+            background-color: hsl(158, 36%, 37%);
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        #cart {
+            position: relative;
+            right: 10px;
+            height: 14px;
+            width: 15px;
+        }
+
+        @media screen and (max-width:540px) {
+            body {
+                height: 25vh;
+            }
+
+            .box {
+                height: 35vh;
+                width: 69vw;
+                flex-wrap: wrap;
+            }
+
+            #perfume {
+                height: 43%;
+                width: 100%;
+            }
+
+            .specifications {
+                height: 20vh;
+                width: 65vw;
+            }
+
+            .dollar {
+                height: 18%;
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img id="perfume" src="images/image-product-desktop.jpg" alt="product">
+        <div class="specifications">
+            <h5>PERFUME</h5>
+            <h1>Gabrielle Essence Eau De Parfum</h1>
+            <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
+                Perfumer-Creator for the House of CHANEL.</p>
+            <div class="dollar">
+                <h1>$149.99</h1>
+                <p>$169.99</p>
+            </div>
+            <div class="click">
+                <button><img id="cart" src="images/icon-cart.svg" alt="cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
